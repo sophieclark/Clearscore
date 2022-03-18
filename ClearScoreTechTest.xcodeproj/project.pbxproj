@@ -10,12 +10,12 @@
 		36D5C1ED27E4FE7A00B55511 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C1EC27E4FE7A00B55511 /* AppDelegate.swift */; };
 		36D5C1EF27E4FE7A00B55511 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C1EE27E4FE7A00B55511 /* SceneDelegate.swift */; };
 		36D5C1F127E4FE7A00B55511 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C1F027E4FE7A00B55511 /* ViewController.swift */; };
-		36D5C1F427E4FE7A00B55511 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36D5C1F227E4FE7A00B55511 /* Main.storyboard */; };
 		36D5C1F627E4FE8200B55511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36D5C1F527E4FE8200B55511 /* Assets.xcassets */; };
 		36D5C1F927E4FE8200B55511 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36D5C1F727E4FE8200B55511 /* LaunchScreen.storyboard */; };
 		36D5C20427E4FE8200B55511 /* ClearScoreTechTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C20327E4FE8200B55511 /* ClearScoreTechTestTests.swift */; };
 		36D5C20E27E4FE8200B55511 /* ClearScoreTechTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C20D27E4FE8200B55511 /* ClearScoreTechTestUITests.swift */; };
 		36D5C21027E4FE8200B55511 /* ClearScoreTechTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C20F27E4FE8200B55511 /* ClearScoreTechTestUITestsLaunchTests.swift */; };
+		36D5C21D27E4FF3500B55511 /* NiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C21C27E4FF3500B55511 /* NiblessViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,6 @@
 		36D5C1EC27E4FE7A00B55511 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36D5C1EE27E4FE7A00B55511 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		36D5C1F027E4FE7A00B55511 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		36D5C1F327E4FE7A00B55511 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36D5C1F527E4FE8200B55511 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36D5C1F827E4FE8200B55511 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36D5C1FA27E4FE8200B55511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		36D5C20927E4FE8200B55511 /* ClearScoreTechTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClearScoreTechTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36D5C20D27E4FE8200B55511 /* ClearScoreTechTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearScoreTechTestUITests.swift; sourceTree = "<group>"; };
 		36D5C20F27E4FE8200B55511 /* ClearScoreTechTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearScoreTechTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		36D5C21C27E4FF3500B55511 /* NiblessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +102,10 @@
 				36D5C1EC27E4FE7A00B55511 /* AppDelegate.swift */,
 				36D5C1EE27E4FE7A00B55511 /* SceneDelegate.swift */,
 				36D5C1F027E4FE7A00B55511 /* ViewController.swift */,
-				36D5C1F227E4FE7A00B55511 /* Main.storyboard */,
 				36D5C1F527E4FE8200B55511 /* Assets.xcassets */,
 				36D5C1F727E4FE8200B55511 /* LaunchScreen.storyboard */,
 				36D5C1FA27E4FE8200B55511 /* Info.plist */,
+				36D5C21C27E4FF3500B55511 /* NiblessViewController.swift */,
 			);
 			path = ClearScoreTechTest;
 			sourceTree = "<group>";
@@ -233,7 +233,6 @@
 			files = (
 				36D5C1F927E4FE8200B55511 /* LaunchScreen.storyboard in Resources */,
 				36D5C1F627E4FE8200B55511 /* Assets.xcassets in Resources */,
-				36D5C1F427E4FE7A00B55511 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36D5C1F127E4FE7A00B55511 /* ViewController.swift in Sources */,
+				36D5C21D27E4FF3500B55511 /* NiblessViewController.swift in Sources */,
 				36D5C1ED27E4FE7A00B55511 /* AppDelegate.swift in Sources */,
 				36D5C1EF27E4FE7A00B55511 /* SceneDelegate.swift in Sources */,
 			);
@@ -297,14 +297,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		36D5C1F227E4FE7A00B55511 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				36D5C1F327E4FE7A00B55511 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		36D5C1F727E4FE8200B55511 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -444,7 +436,6 @@
 				INFOPLIST_FILE = ClearScoreTechTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,7 +463,6 @@
 				INFOPLIST_FILE = ClearScoreTechTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
