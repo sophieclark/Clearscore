@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  ClearScoreTechTest
+
+  Created by Sophie Clark on 18/03/2022.
+  
+*/
+
+"scoreview.top.label" = "Your credit score is";
+"scoreview.bottom.label" = "out of 700";
