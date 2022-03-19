@@ -26,6 +26,7 @@
 		36D5C23227E5DDC300B55511 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C23127E5DDC300B55511 /* Endpoint.swift */; };
 		36D5C23427E5E36D00B55511 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C23327E5E36D00B55511 /* Networkable.swift */; };
 		36D5C23627E5EA6C00B55511 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C23527E5EA6C00B55511 /* String+Localized.swift */; };
+		36D5C23827E6039200B55511 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C23727E6039200B55511 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		36D5C23127E5DDC300B55511 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		36D5C23327E5E36D00B55511 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
 		36D5C23527E5EA6C00B55511 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		36D5C23727E6039200B55511 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				36D5C23127E5DDC300B55511 /* Endpoint.swift */,
 				36D5C23327E5E36D00B55511 /* Networkable.swift */,
 				36D5C23527E5EA6C00B55511 /* String+Localized.swift */,
+				36D5C23727E6039200B55511 /* AppCoordinator.swift */,
 			);
 			path = ClearScoreTechTest;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				36D5C21F27E5019A00B55511 /* DashboardViewModel.swift in Sources */,
 				36D5C23627E5EA6C00B55511 /* String+Localized.swift in Sources */,
 				36D5C23027E5DCDD00B55511 /* CreditFetcher.swift in Sources */,
+				36D5C23827E6039200B55511 /* AppCoordinator.swift in Sources */,
 				36D5C21D27E4FF3500B55511 /* NiblessViewController.swift in Sources */,
 				36D5C1ED27E4FE7A00B55511 /* AppDelegate.swift in Sources */,
 				36D5C1EF27E4FE7A00B55511 /* SceneDelegate.swift in Sources */,

@@ -29,6 +29,14 @@ class ScoreView: NiblessView {
     private func setupUI() {
         scoreLabel = UILabel()
         scoreLabel.font = scoreLabel.font.withSize(60)
+        let scorePercent = Double(viewModel.score) / Double(viewModel.max)
+        if scorePercent < 0.33 {
+            scoreLabel.textColor = .systemRed
+        } else if scorePercent >= 0.33 && scorePercent < 0.66 {
+            scoreLabel.textColor = .systemYellow
+        } else {
+            scoreLabel.textColor = .systemGreen
+        }
         scoreLabel.text = "\(viewModel.score)"
         scoreLabel.textAlignment = .center
         addSubview(scoreLabel)
@@ -60,7 +68,8 @@ class ScoreView: NiblessView {
     }
     
     private func drawCircle() {
-        let path = UIBezierPath(arcCenter: CGPoint(x: self.frame.midX, y: self.frame.midY), radius: self.frame.midY - 16, startAngle: -(CGFloat.pi / 2), endAngle: CGFloat.pi + (CGFloat.pi / 2), clockwise: true)
+        let radius = 125 > self.frame.midY - 16 ? self.frame.midY - 16 : 125
+        let path = UIBezierPath(arcCenter: CGPoint(x: self.frame.midX, y: self.frame.midY), radius: radius, startAngle: -(CGFloat.pi / 2), endAngle: CGFloat.pi + (CGFloat.pi / 2), clockwise: true)
         let circleLayer = CAShapeLayer()
         circleLayer.path = path.cgPath
         circleLayer.lineWidth = 2
