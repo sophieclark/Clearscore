@@ -28,3 +28,14 @@ class Endpoint {
         return components
     }
 }
+
+enum Endpoints {
+    case creditValues
+
+    func getEndpoint() -> Endpoint {
+        switch self {
+        case .creditValues:
+            return Endpoint(api: Endpoint.API(scheme: "https", host: "5lfoiyb0b3.execute-api.us-west-2.amazonaws.com", path: "/prod/mockcredit/values"))
+        }
+    }
+}

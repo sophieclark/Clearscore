@@ -14,16 +14,17 @@ class DashboardViewModel: ObservableObject {
         case loading
         case error(NetworkingError)
     }
-    @Published var creditResult: CreditResult
+    @Published var creditResult: CreditResult = .loading
     private let creditFetcher: CreditFetchable
     private var cancellables = Set<AnyCancellable>()
-    private let creditAccount: CreditAccount?
+    private var creditAccount: CreditAccount?
     
     init(creditFetcher: CreditFetchable) {
         self.creditFetcher = creditFetcher
     }
     
     func refresh() {
+        creditResult = .loading
         creditFetcher.getCreditScore()
             .receive(on: DispatchQueue.main, options: nil)
             .sink(receiveCompletion: { [weak self] completion in
@@ -38,6 +39,7 @@ class DashboardViewModel: ObservableObject {
                 guard let self = self else { return }
                 let scoreViewModel = ScoreViewModel(score: creditAccount.creditReportInfo.score, max: creditAccount.creditReportInfo.maxScoreValue)
                 self.creditResult = .success(scoreViewModel)
+                self.creditAccount = creditAccount
             })
             .store(in: &cancellables)
     }

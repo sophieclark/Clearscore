@@ -25,14 +25,17 @@ class ScoreView: NiblessView {
         scoreLabel = UILabel()
         scoreLabel.text = "\(viewModel.score)"
         scoreLabel.textAlignment = .center
+        addSubview(scoreLabel)
         
         topLabel = UILabel()
         topLabel.text = viewModel.topLabelText
         topLabel.textAlignment = .center
+        addSubview(topLabel)
         
         bottomLabel = UILabel()
         bottomLabel.text = viewModel.bottomLabelText
         bottomLabel.textAlignment = .center
+        addSubview(bottomLabel)
     }
     
     func setupConstraints() {

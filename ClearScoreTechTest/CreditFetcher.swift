@@ -12,8 +12,9 @@ class CreditFetcher {
     private let session: URLSession
     private let endpoint: Endpoint
     
-    init(session: URLSession = .shared) {
+    init(session: URLSession = .shared, endpoint: Endpoint) {
         self.session = session
+        self.endpoint = endpoint
     }
 }
 
