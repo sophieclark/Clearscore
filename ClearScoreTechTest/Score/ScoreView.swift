@@ -28,6 +28,7 @@ class ScoreView: NiblessView {
     
     private func setupUI() {
         scoreLabel = UILabel()
+        scoreLabel.font = scoreLabel.font.withSize(60)
         scoreLabel.text = "\(viewModel.score)"
         scoreLabel.textAlignment = .center
         addSubview(scoreLabel)
@@ -45,22 +46,21 @@ class ScoreView: NiblessView {
     
     private func setupConstraints() {
         topLabel.translatesAutoresizingMaskIntoConstraints = false
-        topLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 8).isActive = true
+        topLabel.bottomAnchor.constraint(equalTo: scoreLabel.topAnchor).isActive = true
         topLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         
         scoreLabel.translatesAutoresizingMaskIntoConstraints = false
-        scoreLabel.topAnchor.constraint(equalTo: topLabel.bottomAnchor, constant: 8).isActive = true
+        scoreLabel.topAnchor.constraint(equalTo: topLabel.bottomAnchor).isActive = true
         scoreLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         scoreLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
         bottomLabel.translatesAutoresizingMaskIntoConstraints = false
-        bottomLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor, constant: 8).isActive = true
-        bottomLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 8).isActive = true
+        bottomLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor).isActive = true
         bottomLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     }
     
     private func drawCircle() {
-        let path = UIBezierPath(arcCenter: CGPoint(x: self.frame.midX, y: self.frame.midY), radius: self.frame.midY - 8, startAngle: -(CGFloat.pi / 2), endAngle: CGFloat.pi + (CGFloat.pi / 2), clockwise: true)
+        let path = UIBezierPath(arcCenter: CGPoint(x: self.frame.midX, y: self.frame.midY), radius: self.frame.midY - 16, startAngle: -(CGFloat.pi / 2), endAngle: CGFloat.pi + (CGFloat.pi / 2), clockwise: true)
         let circleLayer = CAShapeLayer()
         circleLayer.path = path.cgPath
         circleLayer.lineWidth = 2
