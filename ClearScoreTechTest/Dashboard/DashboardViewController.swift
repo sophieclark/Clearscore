@@ -33,6 +33,7 @@ class DashboardViewController: NiblessViewController {
         view.backgroundColor = .systemBackground
         view.addSubview(scoreViewContainer)
         view.addSubview(loadingSpinner)
+        navigationItem.title = "Dashboard"
         
         scoreViewContainer.translatesAutoresizingMaskIntoConstraints = false
         scoreViewContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true

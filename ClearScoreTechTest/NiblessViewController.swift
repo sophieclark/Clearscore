@@ -25,6 +25,10 @@ open class NiblessViewController: UIViewController {
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
+    
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
+    }
 }
 
 open class NiblessView: UIView {
@@ -39,4 +43,10 @@ open class NiblessView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+}
+
+extension UINavigationController {
+    override open var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
+    }
 }

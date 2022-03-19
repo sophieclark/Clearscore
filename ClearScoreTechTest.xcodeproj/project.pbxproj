@@ -27,6 +27,8 @@
 		36D5C23427E5E36D00B55511 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C23327E5E36D00B55511 /* Networkable.swift */; };
 		36D5C23627E5EA6C00B55511 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C23527E5EA6C00B55511 /* String+Localized.swift */; };
 		36D5C23827E6039200B55511 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C23727E6039200B55511 /* AppCoordinator.swift */; };
+		36D5C23A27E609DF00B55511 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C23927E609DF00B55511 /* UIColor+Custom.swift */; };
+		36D5C24127E60A5400B55511 /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C24027E60A5400B55511 /* DashboardCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		36D5C23327E5E36D00B55511 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
 		36D5C23527E5EA6C00B55511 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		36D5C23727E6039200B55511 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		36D5C23927E609DF00B55511 /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
+		36D5C24027E60A5400B55511 /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,13 +134,10 @@
 				36D5C21C27E4FF3500B55511 /* NiblessViewController.swift */,
 				36D5C22A27E5052E00B55511 /* Score */,
 				36D5C22727E5042A00B55511 /* Localizable.strings */,
-				36D5C22B27E5DB3900B55511 /* CreditFetchable.swift */,
-				36D5C22D27E5DBFE00B55511 /* CreditModels.swift */,
-				36D5C22F27E5DCDD00B55511 /* CreditFetcher.swift */,
-				36D5C23127E5DDC300B55511 /* Endpoint.swift */,
-				36D5C23327E5E36D00B55511 /* Networkable.swift */,
-				36D5C23527E5EA6C00B55511 /* String+Localized.swift */,
-				36D5C23727E6039200B55511 /* AppCoordinator.swift */,
+				36D5C23C27E60A0400B55511 /* Networking */,
+				36D5C24227E60ADF00B55511 /* Models */,
+				36D5C23B27E609F300B55511 /* Extensions */,
+				36D5C23F27E60A3F00B55511 /* Coordinators */,
 			);
 			path = ClearScoreTechTest;
 			sourceTree = "<group>";
@@ -174,6 +175,59 @@
 				36D5C22827E5052500B55511 /* ScoreViewModel.swift */,
 			);
 			path = Score;
+			sourceTree = "<group>";
+		};
+		36D5C23B27E609F300B55511 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				36D5C23527E5EA6C00B55511 /* String+Localized.swift */,
+				36D5C23927E609DF00B55511 /* UIColor+Custom.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		36D5C23C27E60A0400B55511 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				36D5C23E27E60A2900B55511 /* Endpoints */,
+				36D5C23D27E60A1E00B55511 /* Types */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		36D5C23D27E60A1E00B55511 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				36D5C23127E5DDC300B55511 /* Endpoint.swift */,
+				36D5C23327E5E36D00B55511 /* Networkable.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		36D5C23E27E60A2900B55511 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				36D5C22F27E5DCDD00B55511 /* CreditFetcher.swift */,
+				36D5C22B27E5DB3900B55511 /* CreditFetchable.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		36D5C23F27E60A3F00B55511 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				36D5C23727E6039200B55511 /* AppCoordinator.swift */,
+				36D5C24027E60A5400B55511 /* DashboardCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		36D5C24227E60ADF00B55511 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				36D5C22D27E5DBFE00B55511 /* CreditModels.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36D5C1F127E4FE7A00B55511 /* DashboardViewController.swift in Sources */,
+				36D5C24127E60A5400B55511 /* DashboardCoordinator.swift in Sources */,
 				36D5C22C27E5DB3900B55511 /* CreditFetchable.swift in Sources */,
 				36D5C22E27E5DBFE00B55511 /* CreditModels.swift in Sources */,
 				36D5C21F27E5019A00B55511 /* DashboardViewModel.swift in Sources */,
@@ -315,6 +370,7 @@
 				36D5C23027E5DCDD00B55511 /* CreditFetcher.swift in Sources */,
 				36D5C23827E6039200B55511 /* AppCoordinator.swift in Sources */,
 				36D5C21D27E4FF3500B55511 /* NiblessViewController.swift in Sources */,
+				36D5C23A27E609DF00B55511 /* UIColor+Custom.swift in Sources */,
 				36D5C1ED27E4FE7A00B55511 /* AppDelegate.swift in Sources */,
 				36D5C1EF27E4FE7A00B55511 /* SceneDelegate.swift in Sources */,
 				36D5C22227E5035000B55511 /* ScoreView.swift in Sources */,

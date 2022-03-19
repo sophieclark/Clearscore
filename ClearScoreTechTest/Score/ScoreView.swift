@@ -73,7 +73,7 @@ class ScoreView: NiblessView {
         let circleLayer = CAShapeLayer()
         circleLayer.path = path.cgPath
         circleLayer.lineWidth = 2
-        circleLayer.strokeColor = UIColor.black.cgColor
+        circleLayer.strokeColor = UIColor.lineColor.cgColor
         circleLayer.fillColor = UIColor.clear.cgColor
         layer.addSublayer(circleLayer)
         addAnimation(to: circleLayer)
