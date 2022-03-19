@@ -9,9 +9,21 @@ import Foundation
 
 class Endpoint {
     struct API {
-        let scheme: String
-        let host: String
-        let path: String
+        var scheme: String
+        var host: String
+        var path: String
+        
+        init(scheme: String, host: String, path: String) {
+            self.scheme = scheme
+            self.host = host
+            self.path = path 
+        }
+        
+        init(url: URL) {
+            self.scheme = url.scheme ?? ""
+            self.host = url.host ?? ""
+            self.path = url.path
+        }
     }
     var api: API
     
@@ -38,4 +50,13 @@ enum Endpoints {
             return Endpoint(api: Endpoint.API(scheme: "https", host: "5lfoiyb0b3.execute-api.us-west-2.amazonaws.com", path: "/prod/mockcredit/values"))
         }
     }
+    
+    func getTestData() -> Endpoint {
+        switch self {
+        case .creditValues:
+            return Endpoint(api: Endpoint.API(url: URL(string: Bundle.main.path(forResource: "mockcredit-values", ofType: "json")!)!))
+        }
+    }
 }
+
+// https://5lfoiyb0b3.execute-api.us-west-2.amazonaws.com/prod/mockcredit/values

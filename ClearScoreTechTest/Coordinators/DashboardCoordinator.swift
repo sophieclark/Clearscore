@@ -18,9 +18,15 @@ class DashboardCoordinator: Coordinator {
     }
     
     func start() {
+        #if TEST
+        let viewModel = DashboardViewModel(creditFetcher: CreditFetcher(endpoint: Endpoints.creditValues.getTestData()))
+        let initialVC = DashboardViewController(viewModel: viewModel)
+        navigationController.pushViewController(initialVC, animated: false)
+        #else
         let viewModel = DashboardViewModel(creditFetcher: CreditFetcher(endpoint: Endpoints.creditValues.getEndpoint()))
         let initialVC = DashboardViewController(viewModel: viewModel)
         navigationController.pushViewController(initialVC, animated: false)
+        #endif
     }
     
     
