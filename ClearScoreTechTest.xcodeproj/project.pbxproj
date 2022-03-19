@@ -25,6 +25,7 @@
 		36D5C23027E5DCDD00B55511 /* CreditFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C22F27E5DCDD00B55511 /* CreditFetcher.swift */; };
 		36D5C23227E5DDC300B55511 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C23127E5DDC300B55511 /* Endpoint.swift */; };
 		36D5C23427E5E36D00B55511 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C23327E5E36D00B55511 /* Networkable.swift */; };
+		36D5C23627E5EA6C00B55511 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C23527E5EA6C00B55511 /* String+Localized.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		36D5C22F27E5DCDD00B55511 /* CreditFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditFetcher.swift; sourceTree = "<group>"; };
 		36D5C23127E5DDC300B55511 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		36D5C23327E5E36D00B55511 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
+		36D5C23527E5EA6C00B55511 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				36D5C22F27E5DCDD00B55511 /* CreditFetcher.swift */,
 				36D5C23127E5DDC300B55511 /* Endpoint.swift */,
 				36D5C23327E5E36D00B55511 /* Networkable.swift */,
+				36D5C23527E5EA6C00B55511 /* String+Localized.swift */,
 			);
 			path = ClearScoreTechTest;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				36D5C22C27E5DB3900B55511 /* CreditFetchable.swift in Sources */,
 				36D5C22E27E5DBFE00B55511 /* CreditModels.swift in Sources */,
 				36D5C21F27E5019A00B55511 /* DashboardViewModel.swift in Sources */,
+				36D5C23627E5EA6C00B55511 /* String+Localized.swift in Sources */,
 				36D5C23027E5DCDD00B55511 /* CreditFetcher.swift in Sources */,
 				36D5C21D27E4FF3500B55511 /* NiblessViewController.swift in Sources */,
 				36D5C1ED27E4FE7A00B55511 /* AppDelegate.swift in Sources */,

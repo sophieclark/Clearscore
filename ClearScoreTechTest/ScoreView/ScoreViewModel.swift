@@ -8,12 +8,15 @@
 import Combine
 
 struct ScoreViewModel {
-    let topLabelText = String(localized: "scoreview.top.label")
-    let bottomLabelText = String(localized: "scoreview.bottom.label")
+    let topLabelText: String
+    let bottomLabelText: String
     let score: Int
+    let max: Int
     
-    init(score: Int) {
+    init(score: Int, max: Int) {
         self.score = score
+        self.max = max
+        self.topLabelText = String(localized: "scoreview.top.label")
+        self.bottomLabelText = String(format: "scoreview.bottom.label".localized(), max)
     }
 }
-
