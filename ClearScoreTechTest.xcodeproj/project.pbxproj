@@ -29,6 +29,7 @@
 		36D5C23827E6039200B55511 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C23727E6039200B55511 /* AppCoordinator.swift */; };
 		36D5C23A27E609DF00B55511 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C23927E609DF00B55511 /* UIColor+Custom.swift */; };
 		36D5C24127E60A5400B55511 /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C24027E60A5400B55511 /* DashboardCoordinator.swift */; };
+		36D5C24427E66D5300B55511 /* DashboardViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C24327E66D5300B55511 /* DashboardViewSnapshotTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		36D5C23727E6039200B55511 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		36D5C23927E609DF00B55511 /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
 		36D5C24027E60A5400B55511 /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
+		36D5C24327E66D5300B55511 /* DashboardViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewSnapshotTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				36D5C20327E4FE8200B55511 /* ClearScoreTechTestTests.swift */,
+				36D5C24327E66D5300B55511 /* DashboardViewSnapshotTests.swift */,
 			);
 			path = ClearScoreTechTestTests;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36D5C24427E66D5300B55511 /* DashboardViewSnapshotTests.swift in Sources */,
 				36D5C20427E4FE8200B55511 /* ClearScoreTechTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
