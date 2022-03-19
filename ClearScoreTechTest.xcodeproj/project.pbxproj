@@ -126,7 +126,7 @@
 				36D5C1F727E4FE8200B55511 /* LaunchScreen.storyboard */,
 				36D5C1FA27E4FE8200B55511 /* Info.plist */,
 				36D5C21C27E4FF3500B55511 /* NiblessViewController.swift */,
-				36D5C22A27E5052E00B55511 /* ScoreView */,
+				36D5C22A27E5052E00B55511 /* Score */,
 				36D5C22727E5042A00B55511 /* Localizable.strings */,
 				36D5C22B27E5DB3900B55511 /* CreditFetchable.swift */,
 				36D5C22D27E5DBFE00B55511 /* CreditModels.swift */,
@@ -164,13 +164,13 @@
 			path = Dashboard;
 			sourceTree = "<group>";
 		};
-		36D5C22A27E5052E00B55511 /* ScoreView */ = {
+		36D5C22A27E5052E00B55511 /* Score */ = {
 			isa = PBXGroup;
 			children = (
 				36D5C22127E5035000B55511 /* ScoreView.swift */,
 				36D5C22827E5052500B55511 /* ScoreViewModel.swift */,
 			);
-			path = ScoreView;
+			path = Score;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

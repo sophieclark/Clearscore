@@ -21,7 +21,12 @@ class ScoreView: NiblessView {
         setupConstraints()
     }
     
-    func setupUI() {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        drawCircle()
+    }
+    
+    private func setupUI() {
         scoreLabel = UILabel()
         scoreLabel.text = "\(viewModel.score)"
         scoreLabel.textAlignment = .center
@@ -38,9 +43,9 @@ class ScoreView: NiblessView {
         addSubview(bottomLabel)
     }
     
-    func setupConstraints() {
+    private func setupConstraints() {
         topLabel.translatesAutoresizingMaskIntoConstraints = false
-        topLabel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        topLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 8).isActive = true
         topLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         
         scoreLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -50,6 +55,29 @@ class ScoreView: NiblessView {
         
         bottomLabel.translatesAutoresizingMaskIntoConstraints = false
         bottomLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor, constant: 8).isActive = true
-        bottomLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        bottomLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 8).isActive = true
+        bottomLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+    }
+    
+    private func drawCircle() {
+        let path = UIBezierPath(arcCenter: CGPoint(x: self.frame.midX, y: self.frame.midY), radius: self.frame.midY - 8, startAngle: -(CGFloat.pi / 2), endAngle: CGFloat.pi + (CGFloat.pi / 2), clockwise: true)
+        let circleLayer = CAShapeLayer()
+        circleLayer.path = path.cgPath
+        circleLayer.lineWidth = 2
+        circleLayer.strokeColor = UIColor.black.cgColor
+        circleLayer.fillColor = UIColor.clear.cgColor
+        layer.addSublayer(circleLayer)
+        addAnimation(to: circleLayer)
+    }
+    
+    private func addAnimation(to layer: CALayer) {
+        let drawAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        drawAnimation.duration = 0.75
+        drawAnimation.repeatCount = 1.0
+        drawAnimation.isRemovedOnCompletion = false
+        drawAnimation.fromValue = 0
+        drawAnimation.toValue = 1
+        drawAnimation.timingFunction = CAMediaTimingFunction(name: .easeOut)
+        layer.add(drawAnimation, forKey: "drawCircleAnimation")
     }
 }
