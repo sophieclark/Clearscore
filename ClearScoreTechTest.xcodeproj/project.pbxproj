@@ -20,6 +20,11 @@
 		36D5C22227E5035000B55511 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C22127E5035000B55511 /* ScoreView.swift */; };
 		36D5C22527E5042A00B55511 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36D5C22727E5042A00B55511 /* Localizable.strings */; };
 		36D5C22927E5052500B55511 /* ScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C22827E5052500B55511 /* ScoreViewModel.swift */; };
+		36D5C22C27E5DB3900B55511 /* CreditFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C22B27E5DB3900B55511 /* CreditFetchable.swift */; };
+		36D5C22E27E5DBFE00B55511 /* CreditModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C22D27E5DBFE00B55511 /* CreditModels.swift */; };
+		36D5C23027E5DCDD00B55511 /* CreditFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C22F27E5DCDD00B55511 /* CreditFetcher.swift */; };
+		36D5C23227E5DDC300B55511 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C23127E5DDC300B55511 /* Endpoint.swift */; };
+		36D5C23427E5E36D00B55511 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C23327E5E36D00B55511 /* Networkable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,11 @@
 		36D5C22127E5035000B55511 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		36D5C22627E5042A00B55511 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		36D5C22827E5052500B55511 /* ScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewModel.swift; sourceTree = "<group>"; };
+		36D5C22B27E5DB3900B55511 /* CreditFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditFetchable.swift; sourceTree = "<group>"; };
+		36D5C22D27E5DBFE00B55511 /* CreditModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditModels.swift; sourceTree = "<group>"; };
+		36D5C22F27E5DCDD00B55511 /* CreditFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditFetcher.swift; sourceTree = "<group>"; };
+		36D5C23127E5DDC300B55511 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		36D5C23327E5E36D00B55511 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +126,11 @@
 				36D5C21C27E4FF3500B55511 /* NiblessViewController.swift */,
 				36D5C22A27E5052E00B55511 /* ScoreView */,
 				36D5C22727E5042A00B55511 /* Localizable.strings */,
+				36D5C22B27E5DB3900B55511 /* CreditFetchable.swift */,
+				36D5C22D27E5DBFE00B55511 /* CreditModels.swift */,
+				36D5C22F27E5DCDD00B55511 /* CreditFetcher.swift */,
+				36D5C23127E5DDC300B55511 /* Endpoint.swift */,
+				36D5C23327E5E36D00B55511 /* Networkable.swift */,
 			);
 			path = ClearScoreTechTest;
 			sourceTree = "<group>";
@@ -287,11 +302,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				36D5C1F127E4FE7A00B55511 /* DashboardViewController.swift in Sources */,
+				36D5C22C27E5DB3900B55511 /* CreditFetchable.swift in Sources */,
+				36D5C22E27E5DBFE00B55511 /* CreditModels.swift in Sources */,
 				36D5C21F27E5019A00B55511 /* DashboardViewModel.swift in Sources */,
+				36D5C23027E5DCDD00B55511 /* CreditFetcher.swift in Sources */,
 				36D5C21D27E4FF3500B55511 /* NiblessViewController.swift in Sources */,
 				36D5C1ED27E4FE7A00B55511 /* AppDelegate.swift in Sources */,
 				36D5C1EF27E4FE7A00B55511 /* SceneDelegate.swift in Sources */,
 				36D5C22227E5035000B55511 /* ScoreView.swift in Sources */,
+				36D5C23227E5DDC300B55511 /* Endpoint.swift in Sources */,
+				36D5C23427E5E36D00B55511 /* Networkable.swift in Sources */,
 				36D5C22927E5052500B55511 /* ScoreViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
