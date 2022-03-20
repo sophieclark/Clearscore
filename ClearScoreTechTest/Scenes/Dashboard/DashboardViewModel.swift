@@ -47,11 +47,11 @@ class DashboardViewModel: ObservableObject {
     func errorViewModel(for error: NetworkingError) -> ErrorViewModel {
         switch error {
         case .parsing:
-            return ErrorViewModel(errorTitle: "Oops!", errorDescription: "Something went wrong when loading your credit information.", buttonText: String(localized: "errorview.button.text"))
+            return ErrorViewModel(errorTitle: String(localized: "errorview.title.text"), errorDescription: String(localized: "errorview.description.parsing.text"), buttonText: String(localized: "errorview.button.text"))
         case .network:
-            return ErrorViewModel(errorTitle: "Oops!", errorDescription: "Something went wrong when loading your credit information. Please check your network connection", buttonText: String(localized: "errorview.button.text"))
+            return ErrorViewModel(errorTitle: String(localized: "errorview.title.text"), errorDescription: String(localized: "errorview.description.network.text"), buttonText: String(localized: "errorview.button.text"))
         case .url:
-            return ErrorViewModel(errorTitle: "Oops!", errorDescription: "Something went wrong.  Please try again", buttonText: String(localized: "errorview.button.text"))
+            return ErrorViewModel(errorTitle: String(localized: "errorview.title.text"), errorDescription: String(localized: "errorview.description.url.text"), buttonText: String(localized: "errorview.button.text"))
         }
     }
 }

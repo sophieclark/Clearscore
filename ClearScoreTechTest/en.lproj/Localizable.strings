@@ -10,3 +10,7 @@
 "scoreview.bottom.label" = "out of %d";
 
 "errorview.button.text" = "Retry";
+"errorview.title.text" = "Oops!";
+"errorview.description.parsing.text" = "Something went wrong when loading your credit information.";
+"errorview.description.network.text" = "Something went wrong when loading your credit information. Please check your network connection";
+"errorview.description.url.text" = "Something went wrong. Please try again";

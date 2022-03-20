@@ -17,7 +17,7 @@ class DashboardViewUITests: XCTestCase {
         app = XCUIApplication()
     }
 
-    func testDahsboardView() throws {
+    func testDashboardViewSuccess() throws {
         app.launchArguments = ["-launchWithSuccess"]
         app.launch()
         XCTAssert(app.staticTexts["Dashboard"].exists)
@@ -32,4 +32,18 @@ class DashboardViewUITests: XCTestCase {
         XCTAssert(app.staticTexts["out of 700"].exists)
     }
 
+    func testDashboardViewFailure() throws {
+        app.launchArguments = ["-launchWithFailure"]
+        app.launch()
+        XCTAssert(app.staticTexts["Dashboard"].exists)
+
+        guard app.staticTexts["Oops!"].waitForExistence(timeout: 5) else {
+            XCTFail("Text doesn't exist \(#file) \(#line)")
+            return
+        }
+        
+        XCTAssert(app.staticTexts["Oops!"].exists)
+        XCTAssert(app.staticTexts["Something went wrong when loading your credit information."].exists)
+        XCTAssert(app.buttons["Retry"].exists)
+    }
 }
