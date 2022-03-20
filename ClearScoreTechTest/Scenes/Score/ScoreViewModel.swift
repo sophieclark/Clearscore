@@ -20,3 +20,5 @@ struct ScoreViewModel {
         self.bottomLabelText = String(format: "scoreview.bottom.label".localized(), max)
     }
 }
+
+extension ScoreViewModel: Equatable {}

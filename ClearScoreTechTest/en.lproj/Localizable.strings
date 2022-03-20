@@ -8,3 +8,5 @@
 
 "scoreview.top.label" = "Your credit score is";
 "scoreview.bottom.label" = "out of %d";
+
+"errorview.button.text" = "Retry";

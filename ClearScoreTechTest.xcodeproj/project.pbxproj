@@ -31,6 +31,10 @@
 		36D5C24127E60A5400B55511 /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C24027E60A5400B55511 /* DashboardCoordinator.swift */; };
 		36FBF90D27E676B300B9F555 /* DashboardViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FBF90C27E676B300B9F555 /* DashboardViewUITests.swift */; };
 		36FBF90F27E6809200B9F555 /* mockcredit-values.json in Resources */ = {isa = PBXBuildFile; fileRef = 36FBF90E27E6809200B9F555 /* mockcredit-values.json */; };
+		36FBF91E27E720BC00B9F555 /* DashboardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FBF91D27E720BC00B9F555 /* DashboardViewModelTests.swift */; };
+		36FBF92927E73A1B00B9F555 /* mockcredit-values-fail.json in Resources */ = {isa = PBXBuildFile; fileRef = 36FBF92827E73A1B00B9F555 /* mockcredit-values-fail.json */; };
+		36FBF92C27E73D8100B9F555 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FBF92B27E73D8100B9F555 /* ErrorView.swift */; };
+		36FBF92E27E73DC400B9F555 /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FBF92D27E73DC400B9F555 /* ErrorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,10 @@
 		36D5C24027E60A5400B55511 /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
 		36FBF90C27E676B300B9F555 /* DashboardViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewUITests.swift; sourceTree = "<group>"; };
 		36FBF90E27E6809200B9F555 /* mockcredit-values.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "mockcredit-values.json"; sourceTree = "<group>"; };
+		36FBF91D27E720BC00B9F555 /* DashboardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelTests.swift; sourceTree = "<group>"; };
+		36FBF92827E73A1B00B9F555 /* mockcredit-values-fail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "mockcredit-values-fail.json"; sourceTree = "<group>"; };
+		36FBF92B27E73D8100B9F555 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		36FBF92D27E73DC400B9F555 /* ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,12 +139,11 @@
 			children = (
 				36D5C1EC27E4FE7A00B55511 /* AppDelegate.swift */,
 				36D5C1EE27E4FE7A00B55511 /* SceneDelegate.swift */,
-				36D5C22027E5030B00B55511 /* Dashboard */,
+				36FBF92A27E73D6700B9F555 /* Scenes */,
 				36D5C1F527E4FE8200B55511 /* Assets.xcassets */,
 				36D5C1F727E4FE8200B55511 /* LaunchScreen.storyboard */,
 				36D5C1FA27E4FE8200B55511 /* Info.plist */,
 				36D5C21C27E4FF3500B55511 /* NiblessViewController.swift */,
-				36D5C22A27E5052E00B55511 /* Score */,
 				36D5C22727E5042A00B55511 /* Localizable.strings */,
 				36D5C23C27E60A0400B55511 /* Networking */,
 				36D5C24227E60ADF00B55511 /* Models */,
@@ -151,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				36D5C20327E4FE8200B55511 /* ClearScoreTechTestTests.swift */,
+				36FBF91F27E720C300B9F555 /* Dashboard */,
 			);
 			path = ClearScoreTechTestTests;
 			sourceTree = "<group>";
@@ -240,8 +248,36 @@
 			isa = PBXGroup;
 			children = (
 				36FBF90E27E6809200B9F555 /* mockcredit-values.json */,
+				36FBF92827E73A1B00B9F555 /* mockcredit-values-fail.json */,
 			);
 			path = MockData;
+			sourceTree = "<group>";
+		};
+		36FBF91F27E720C300B9F555 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				36FBF91D27E720BC00B9F555 /* DashboardViewModelTests.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		36FBF92A27E73D6700B9F555 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				36D5C22027E5030B00B55511 /* Dashboard */,
+				36D5C22A27E5052E00B55511 /* Score */,
+				36FBF92F27E744A600B9F555 /* Error */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		36FBF92F27E744A600B9F555 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				36FBF92B27E73D8100B9F555 /* ErrorView.swift */,
+				36FBF92D27E73DC400B9F555 /* ErrorViewModel.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +387,7 @@
 				36FBF90F27E6809200B9F555 /* mockcredit-values.json in Resources */,
 				36D5C1F927E4FE8200B55511 /* LaunchScreen.storyboard in Resources */,
 				36D5C22527E5042A00B55511 /* Localizable.strings in Resources */,
+				36FBF92927E73A1B00B9F555 /* mockcredit-values-fail.json in Resources */,
 				36D5C1F627E4FE8200B55511 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,10 +417,12 @@
 				36D5C24127E60A5400B55511 /* DashboardCoordinator.swift in Sources */,
 				36D5C22C27E5DB3900B55511 /* CreditFetchable.swift in Sources */,
 				36D5C22E27E5DBFE00B55511 /* CreditModels.swift in Sources */,
+				36FBF92C27E73D8100B9F555 /* ErrorView.swift in Sources */,
 				36D5C21F27E5019A00B55511 /* DashboardViewModel.swift in Sources */,
 				36D5C23627E5EA6C00B55511 /* String+Localized.swift in Sources */,
 				36D5C23027E5DCDD00B55511 /* CreditFetcher.swift in Sources */,
 				36D5C23827E6039200B55511 /* AppCoordinator.swift in Sources */,
+				36FBF92E27E73DC400B9F555 /* ErrorViewModel.swift in Sources */,
 				36D5C21D27E4FF3500B55511 /* NiblessViewController.swift in Sources */,
 				36D5C23A27E609DF00B55511 /* UIColor+Custom.swift in Sources */,
 				36D5C1ED27E4FE7A00B55511 /* AppDelegate.swift in Sources */,
@@ -400,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36D5C20427E4FE8200B55511 /* ClearScoreTechTestTests.swift in Sources */,
+				36FBF91E27E720BC00B9F555 /* DashboardViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,6 +18,7 @@ class DashboardViewUITests: XCTestCase {
     }
 
     func testDahsboardView() throws {
+        app.launchArguments = ["-launchWithSuccess"]
         app.launch()
         XCTAssert(app.staticTexts["Dashboard"].exists)
         

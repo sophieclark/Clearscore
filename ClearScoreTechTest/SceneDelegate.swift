@@ -19,8 +19,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         coordinator = AppCoordinator(navigationController: navigationController)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
+        #if TESTS
         self.window = window
+        
+        if CommandLine.arguments.contains("-launchWithSuccess") || CommandLine.arguments.contains("-launchWithFailure") {
+            coordinator?.start()
+        }
+        return
+        #else
         coordinator?.start()
+        self.window = window
+        #endif
+        
     }
 }
 

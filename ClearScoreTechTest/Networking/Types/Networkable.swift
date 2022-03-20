@@ -26,12 +26,10 @@ extension Networkable {
         }
         let urlRequest = URLRequest(url: url)
         return session.dataTaskPublisher(for: urlRequest)
-            .tryMap({ output in
-                guard output.response is HTTPURLResponse else {
-                    throw NetworkingError.network(description: "Server error")
-                }
-                return output.data
+            .mapError({ urlError in
+                NetworkingError.url(description: urlError.localizedDescription)
             })
+            .map(\.data)
             .decode(type: T.self, decoder: decoder)
             .mapError({ error in
                 NetworkingError.parsing(description: error.localizedDescription)

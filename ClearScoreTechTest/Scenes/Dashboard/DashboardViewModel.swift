@@ -43,4 +43,26 @@ class DashboardViewModel: ObservableObject {
             })
             .store(in: &cancellables)
     }
+    
+    func errorViewModel(for error: NetworkingError) -> ErrorViewModel {
+        switch error {
+        case .parsing:
+            return ErrorViewModel(errorTitle: "Oops!", errorDescription: "Something went wrong when loading your credit information.", buttonText: String(localized: "errorview.button.text"))
+        case .network:
+            return ErrorViewModel(errorTitle: "Oops!", errorDescription: "Something went wrong when loading your credit information. Please check your network connection", buttonText: String(localized: "errorview.button.text"))
+        case .url:
+            return ErrorViewModel(errorTitle: "Oops!", errorDescription: "Something went wrong.  Please try again", buttonText: String(localized: "errorview.button.text"))
+        }
+    }
+}
+
+extension DashboardViewModel.CreditResult: Equatable {
+    static func == (lhs: DashboardViewModel.CreditResult, rhs: DashboardViewModel.CreditResult) -> Bool {
+        switch (lhs, rhs) {
+        case (.success(_), .success(_)), (.loading, .loading), (.error(_), .error(_)):
+            return true
+        default:
+            return false
+        }
+    }
 }

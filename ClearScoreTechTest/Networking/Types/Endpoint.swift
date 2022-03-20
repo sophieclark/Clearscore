@@ -20,7 +20,7 @@ class Endpoint {
         }
         
         init(url: URL) {
-            self.scheme = url.scheme ?? ""
+            self.scheme = url.scheme ?? "file"
             self.host = url.host ?? ""
             self.path = url.path
         }
@@ -51,12 +51,15 @@ enum Endpoints {
         }
     }
     
-    func getTestData() -> Endpoint {
+    func getTestData(success: Bool) -> Endpoint {
         switch self {
         case .creditValues:
-            return Endpoint(api: Endpoint.API(url: URL(string: Bundle.main.path(forResource: "mockcredit-values", ofType: "json")!)!))
+            if success {
+                return Endpoint(api: Endpoint.API(url: URL(fileURLWithPath: Bundle.main.path(forResource: "mockcredit-values", ofType: "json")!)))
+            } else {
+                return Endpoint(api: Endpoint.API(url: URL(fileURLWithPath: Bundle.main.path(forResource: "mockcredit-values-fail", ofType: "json")!)))
+            }
+            
         }
     }
 }
-
-// https://5lfoiyb0b3.execute-api.us-west-2.amazonaws.com/prod/mockcredit/values
