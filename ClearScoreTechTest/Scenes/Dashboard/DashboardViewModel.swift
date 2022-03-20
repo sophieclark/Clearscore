@@ -55,6 +55,13 @@ class DashboardViewModel: ObservableObject {
             return ErrorViewModel(errorTitle: String(localized: "errorview.title.text"), errorDescription: String(localized: "errorview.description.url.text"), buttonText: String(localized: "errorview.button.text"))
         }
     }
+    
+    func goToCreditReport() {
+        guard let creditAccount = creditAccount else {
+            return
+        }
+        sceneEnded.send(.creditDetails(creditAccount))
+    }
 }
 
 extension DashboardViewModel.CreditResult: Equatable {

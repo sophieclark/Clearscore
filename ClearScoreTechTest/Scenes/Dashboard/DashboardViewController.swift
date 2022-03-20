@@ -84,6 +84,8 @@ class DashboardViewController: NiblessViewController {
         scoreView.leadingAnchor.constraint(equalTo: loadedViewContainer.leadingAnchor).isActive = true
         scoreView.trailingAnchor.constraint(equalTo: loadedViewContainer.trailingAnchor).isActive = true
         scoreView.bottomAnchor.constraint(equalTo: loadedViewContainer.bottomAnchor).isActive = true
+        
+        scoreView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(scoreViewTapped)))
     }
     
     private func setupErrorView(with errorViewModel: ErrorViewModel) {
@@ -103,6 +105,11 @@ class DashboardViewController: NiblessViewController {
                 self?.viewModel.refresh()
             }
         }.store(in: &cancellables)
+    }
+    
+    @objc
+    private func scoreViewTapped() {
+        viewModel.goToCreditReport()
     }
 }
 

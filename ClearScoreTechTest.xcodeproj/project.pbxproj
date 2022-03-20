@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36B63BF327E771C000702930 /* CreditAccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B63BF227E771C000702930 /* CreditAccountDetailsViewController.swift */; };
+		36B63BF327E771C000702930 /* CreditReportDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B63BF227E771C000702930 /* CreditReportDetailsViewController.swift */; };
+		36B63BF527E779FD00702930 /* CreditReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B63BF427E779FD00702930 /* CreditReportViewModel.swift */; };
 		36D5C1ED27E4FE7A00B55511 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C1EC27E4FE7A00B55511 /* AppDelegate.swift */; };
 		36D5C1EF27E4FE7A00B55511 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C1EE27E4FE7A00B55511 /* SceneDelegate.swift */; };
 		36D5C1F127E4FE7A00B55511 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C1F027E4FE7A00B55511 /* DashboardViewController.swift */; };
@@ -56,7 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		36B63BF227E771C000702930 /* CreditAccountDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditAccountDetailsViewController.swift; sourceTree = "<group>"; };
+		36B63BF227E771C000702930 /* CreditReportDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditReportDetailsViewController.swift; sourceTree = "<group>"; };
+		36B63BF427E779FD00702930 /* CreditReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditReportViewModel.swift; sourceTree = "<group>"; };
 		36D5C1E927E4FE7A00B55511 /* ClearScoreTechTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClearScoreTechTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36D5C1EC27E4FE7A00B55511 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36D5C1EE27E4FE7A00B55511 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36B63BF627E77A0400702930 /* CreditReport */ = {
+			isa = PBXGroup;
+			children = (
+				36B63BF227E771C000702930 /* CreditReportDetailsViewController.swift */,
+				36B63BF427E779FD00702930 /* CreditReportViewModel.swift */,
+			);
+			path = CreditReport;
+			sourceTree = "<group>";
+		};
 		36D5C1E027E4FE7A00B55511 = {
 			isa = PBXGroup;
 			children = (
@@ -269,7 +280,7 @@
 				36D5C22027E5030B00B55511 /* Dashboard */,
 				36D5C22A27E5052E00B55511 /* Score */,
 				36FBF92F27E744A600B9F555 /* Error */,
-				36B63BF227E771C000702930 /* CreditAccountDetailsViewController.swift */,
+				36B63BF627E77A0400702930 /* CreditReport */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -427,12 +438,13 @@
 				36D5C23827E6039200B55511 /* AppCoordinator.swift in Sources */,
 				36FBF92E27E73DC400B9F555 /* ErrorViewModel.swift in Sources */,
 				36D5C21D27E4FF3500B55511 /* NiblessViewController.swift in Sources */,
+				36B63BF527E779FD00702930 /* CreditReportViewModel.swift in Sources */,
 				36D5C23A27E609DF00B55511 /* UIColor+Custom.swift in Sources */,
 				36D5C1ED27E4FE7A00B55511 /* AppDelegate.swift in Sources */,
 				36D5C1EF27E4FE7A00B55511 /* SceneDelegate.swift in Sources */,
 				36D5C22227E5035000B55511 /* ScoreView.swift in Sources */,
 				36D5C23227E5DDC300B55511 /* Endpoint.swift in Sources */,
-				36B63BF327E771C000702930 /* CreditAccountDetailsViewController.swift in Sources */,
+				36B63BF327E771C000702930 /* CreditReportDetailsViewController.swift in Sources */,
 				36D5C23427E5E36D00B55511 /* Networkable.swift in Sources */,
 				36D5C22927E5052500B55511 /* ScoreViewModel.swift in Sources */,
 			);

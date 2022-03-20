@@ -24,22 +24,23 @@ class DashboardCoordinator: Coordinator {
     }
     
     func start() {
-        var viewModel: DashboardViewModel
-        if CommandLine.arguments.contains("-launchWithSuccess") || CommandLine.arguments.contains("-launchWithFailure") {
-            viewModel = DashboardViewModel(creditFetcher: CreditFetcher(endpoint: Endpoints.creditValues.getTestData(success: CommandLine.arguments.contains("-launchWithSuccess"))))
-        } else {
-            viewModel = DashboardViewModel(creditFetcher: CreditFetcher(endpoint: Endpoints.creditValues.getEndpoint()))
-        }
+        let viewModel = DashboardViewModel(creditFetcher: CreditFetcher(endpoint: Endpoints.creditValues.getEndpoint()))
         let initialVC = DashboardViewController(viewModel: viewModel)
         bind(viewModel: viewModel)
         navigationController.pushViewController(initialVC, animated: false)
     }
     
+    func goToCreditReport(with account: CreditAccount) {
+        let viewModel = CreditReportViewModel(creditAccount: account)
+        let vc = CreditReportDetailsViewController(viewModel: viewModel)
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     func bind(viewModel: DashboardViewModel) {
-        viewModel.sceneEnded.sink { route in
+        viewModel.sceneEnded.sink { [weak self] route in
             switch route {
             case .creditDetails(let account):
-                break
+                self?.goToCreditReport(with: account)
             }
         }.store(in: &cancellables)
     }
