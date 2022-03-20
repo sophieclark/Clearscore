@@ -14,3 +14,20 @@
 "errorview.description.parsing.text" = "Something went wrong when loading your credit information.";
 "errorview.description.network.text" = "Something went wrong when loading your credit information. Please check your network connection";
 "errorview.description.url.text" = "Something went wrong. Please try again";
+
+"creditreport.changes.title" = "Changes";
+"creditreport.insights.title" = "Insights";
+"creditreport.shorttermdebt.title" = "Your short term debt is";
+"creditreport.longtermdebt.title" = "Your long term debt is";
+"creditreport.shorttermdebt.nochange.text" = "Your short term debt has stayed the same";
+"creditreport.shorttermdebt.increased.text" = "Your short term debt has increased by";
+"creditreport.shorttermdebt.decreased.text" = "Your short term debt has decreased by";
+"creditreport.longtermdebt.nochange.text" = "Your long term debt has stayed the same";
+"creditreport.longtermdebt.increased.text" = "Your long term debt has increased by";
+"creditreport.longtermdebt.decreased.text" = "Your long term debt has decreased by";
+"creditreport.insights.nodefaults.text" = "You have no defaults on file";
+"creditreport.insights.defaults.pluralmonths.text" = "You last defaulted %d months ago";
+"creditreport.insights.defaults.onemonth.text" = "You last defaulted 1 month ago";
+"creditreport.insights.nomissedpayments.text" = "You have no missed payments on file";
+"creditreport.insights.missedpayments.pluralmonths.text" = "You last missed a payment %d months ago";
+"creditreport.insights.missedpayments.onemonth.text" = "You last missed a payment 1 month ago";
