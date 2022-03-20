@@ -15,6 +15,7 @@ class DashboardViewModel: ObservableObject {
         case error(NetworkingError)
     }
     @Published var creditResult: CreditResult = .loading
+    var sceneEnded = PassthroughSubject<DashboardRoute, Never>()
     private let creditFetcher: CreditFetchable
     private var cancellables = Set<AnyCancellable>()
     private var creditAccount: CreditAccount?

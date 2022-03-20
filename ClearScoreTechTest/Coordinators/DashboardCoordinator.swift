@@ -7,11 +7,17 @@
 
 import Foundation
 import UIKit
+import Combine
+
+enum DashboardRoute {
+    case creditDetails(CreditAccount)
+}
 
 class DashboardCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     
     var navigationController: UINavigationController
+    private var cancellables = Set<AnyCancellable>()
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -25,8 +31,16 @@ class DashboardCoordinator: Coordinator {
             viewModel = DashboardViewModel(creditFetcher: CreditFetcher(endpoint: Endpoints.creditValues.getEndpoint()))
         }
         let initialVC = DashboardViewController(viewModel: viewModel)
+        bind(viewModel: viewModel)
         navigationController.pushViewController(initialVC, animated: false)
     }
     
-    
+    func bind(viewModel: DashboardViewModel) {
+        viewModel.sceneEnded.sink { route in
+            switch route {
+            case .creditDetails(let account):
+                break
+            }
+        }.store(in: &cancellables)
+    }
 }
