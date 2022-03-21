@@ -35,7 +35,7 @@ class ErrorView: NiblessView {
         addSubview(descriptionLabel)
         
         retryButton = UIButton(configuration: .filled(), primaryAction: nil)
-        retryButton.setTitle("Retry", for: .normal)
+        retryButton.setTitle("errorview.button.text".localized(), for: .normal)
         retryButton.addTarget(self, action: #selector(retryTapped), for: .touchUpInside)
         addSubview(retryButton)
     }

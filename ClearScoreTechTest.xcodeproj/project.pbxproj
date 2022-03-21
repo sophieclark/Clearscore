@@ -14,7 +14,6 @@
 		36D5C1F127E4FE7A00B55511 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C1F027E4FE7A00B55511 /* DashboardViewController.swift */; };
 		36D5C1F627E4FE8200B55511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36D5C1F527E4FE8200B55511 /* Assets.xcassets */; };
 		36D5C1F927E4FE8200B55511 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36D5C1F727E4FE8200B55511 /* LaunchScreen.storyboard */; };
-		36D5C20427E4FE8200B55511 /* ClearScoreTechTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C20327E4FE8200B55511 /* ClearScoreTechTestTests.swift */; };
 		36D5C21D27E4FF3500B55511 /* NiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C21C27E4FF3500B55511 /* NiblessViewController.swift */; };
 		36D5C21F27E5019A00B55511 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C21E27E5019A00B55511 /* DashboardViewModel.swift */; };
 		36D5C22227E5035000B55511 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C22127E5035000B55511 /* ScoreView.swift */; };
@@ -36,6 +35,12 @@
 		36D5C24E27E8D1A500B55511 /* mockcredit-values-shortlongtermdebt.json in Resources */ = {isa = PBXBuildFile; fileRef = 36D5C24D27E8D1A500B55511 /* mockcredit-values-shortlongtermdebt.json */; };
 		36D5C25027E8D2E800B55511 /* mockcredit-values-missedanddefaultedonemonth.json in Resources */ = {isa = PBXBuildFile; fileRef = 36D5C24F27E8D2E800B55511 /* mockcredit-values-missedanddefaultedonemonth.json */; };
 		36D5C25227E8D38100B55511 /* mockcredit-values-missedanddefaultedtenmonths.json in Resources */ = {isa = PBXBuildFile; fileRef = 36D5C25127E8D38100B55511 /* mockcredit-values-missedanddefaultedtenmonths.json */; };
+		36D5C25427E8D62A00B55511 /* ScoreViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C25327E8D62A00B55511 /* ScoreViewModelTests.swift */; };
+		36D5C25827E8D74500B55511 /* CreditReportViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C25727E8D74500B55511 /* CreditReportViewModelTests.swift */; };
+		36D5C25A27E8E1BC00B55511 /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C25927E8E1BC00B55511 /* AppCoordinatorTests.swift */; };
+		36D5C25E27E8E28600B55511 /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C25D27E8E28600B55511 /* MockNavigationController.swift */; };
+		36D5C26027E8E2DC00B55511 /* DashboardCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C25F27E8E2DC00B55511 /* DashboardCoordinatorTests.swift */; };
+		36D5C26227E8E40600B55511 /* MockCreditAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5C26127E8E40600B55511 /* MockCreditAccount.swift */; };
 		36FBF90D27E676B300B9F555 /* DashboardViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FBF90C27E676B300B9F555 /* DashboardViewUITests.swift */; };
 		36FBF90F27E6809200B9F555 /* mockcredit-values.json in Resources */ = {isa = PBXBuildFile; fileRef = 36FBF90E27E6809200B9F555 /* mockcredit-values.json */; };
 		36FBF91E27E720BC00B9F555 /* DashboardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FBF91D27E720BC00B9F555 /* DashboardViewModelTests.swift */; };
@@ -72,7 +77,6 @@
 		36D5C1F827E4FE8200B55511 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36D5C1FA27E4FE8200B55511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36D5C1FF27E4FE8200B55511 /* ClearScoreTechTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClearScoreTechTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		36D5C20327E4FE8200B55511 /* ClearScoreTechTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearScoreTechTestTests.swift; sourceTree = "<group>"; };
 		36D5C20927E4FE8200B55511 /* ClearScoreTechTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClearScoreTechTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36D5C21C27E4FF3500B55511 /* NiblessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessViewController.swift; sourceTree = "<group>"; };
 		36D5C21E27E5019A00B55511 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
@@ -95,6 +99,12 @@
 		36D5C24D27E8D1A500B55511 /* mockcredit-values-shortlongtermdebt.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "mockcredit-values-shortlongtermdebt.json"; sourceTree = "<group>"; };
 		36D5C24F27E8D2E800B55511 /* mockcredit-values-missedanddefaultedonemonth.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "mockcredit-values-missedanddefaultedonemonth.json"; sourceTree = "<group>"; };
 		36D5C25127E8D38100B55511 /* mockcredit-values-missedanddefaultedtenmonths.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "mockcredit-values-missedanddefaultedtenmonths.json"; sourceTree = "<group>"; };
+		36D5C25327E8D62A00B55511 /* ScoreViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewModelTests.swift; sourceTree = "<group>"; };
+		36D5C25727E8D74500B55511 /* CreditReportViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditReportViewModelTests.swift; sourceTree = "<group>"; };
+		36D5C25927E8E1BC00B55511 /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
+		36D5C25D27E8E28600B55511 /* MockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigationController.swift; sourceTree = "<group>"; };
+		36D5C25F27E8E2DC00B55511 /* DashboardCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinatorTests.swift; sourceTree = "<group>"; };
+		36D5C26127E8E40600B55511 /* MockCreditAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCreditAccount.swift; sourceTree = "<group>"; };
 		36FBF90C27E676B300B9F555 /* DashboardViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewUITests.swift; sourceTree = "<group>"; };
 		36FBF90E27E6809200B9F555 /* mockcredit-values.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "mockcredit-values.json"; sourceTree = "<group>"; };
 		36FBF91D27E720BC00B9F555 /* DashboardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelTests.swift; sourceTree = "<group>"; };
@@ -180,8 +190,11 @@
 		36D5C20227E4FE8200B55511 /* ClearScoreTechTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				36D5C20327E4FE8200B55511 /* ClearScoreTechTestTests.swift */,
+				36D5C25C27E8E27400B55511 /* Mocks */,
+				36D5C25627E8D72800B55511 /* CreditReport */,
 				36FBF91F27E720C300B9F555 /* Dashboard */,
+				36D5C25527E8D64500B55511 /* Score */,
+				36D5C25B27E8E1C400B55511 /* Coordinators */,
 			);
 			path = ClearScoreTechTestTests;
 			sourceTree = "<group>";
@@ -265,6 +278,40 @@
 				36D5C22D27E5DBFE00B55511 /* CreditModels.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		36D5C25527E8D64500B55511 /* Score */ = {
+			isa = PBXGroup;
+			children = (
+				36D5C25327E8D62A00B55511 /* ScoreViewModelTests.swift */,
+			);
+			name = Score;
+			sourceTree = "<group>";
+		};
+		36D5C25627E8D72800B55511 /* CreditReport */ = {
+			isa = PBXGroup;
+			children = (
+				36D5C25727E8D74500B55511 /* CreditReportViewModelTests.swift */,
+			);
+			path = CreditReport;
+			sourceTree = "<group>";
+		};
+		36D5C25B27E8E1C400B55511 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				36D5C25927E8E1BC00B55511 /* AppCoordinatorTests.swift */,
+				36D5C25F27E8E2DC00B55511 /* DashboardCoordinatorTests.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		36D5C25C27E8E27400B55511 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				36D5C25D27E8E28600B55511 /* MockNavigationController.swift */,
+				36D5C26127E8E40600B55511 /* MockCreditAccount.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		36FBF91427E6874100B9F555 /* MockData */ = {
@@ -474,8 +521,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36D5C20427E4FE8200B55511 /* ClearScoreTechTestTests.swift in Sources */,
+				36D5C26227E8E40600B55511 /* MockCreditAccount.swift in Sources */,
+				36D5C25A27E8E1BC00B55511 /* AppCoordinatorTests.swift in Sources */,
+				36D5C25E27E8E28600B55511 /* MockNavigationController.swift in Sources */,
 				36FBF91E27E720BC00B9F555 /* DashboardViewModelTests.swift in Sources */,
+				36D5C26027E8E2DC00B55511 /* DashboardCoordinatorTests.swift in Sources */,
+				36D5C25427E8D62A00B55511 /* ScoreViewModelTests.swift in Sources */,
+				36D5C25827E8D74500B55511 /* CreditReportViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

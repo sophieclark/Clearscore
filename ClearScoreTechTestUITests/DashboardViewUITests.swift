@@ -41,4 +41,13 @@ class DashboardViewUITests: XCTestCase {
         XCTAssert(app.staticTexts["Credit report"].exists)
     }
 
+    func testDashboardViewFailure_tappingErrorView_doesntOpenCreditReport() throws {
+        app.launchArguments = ["-launchWithFailure"]
+        app.launch()
+        TestScreens().assertDashboardErrorView(in: app)
+        
+        app.staticTexts["Oops!"].tap()
+        
+        XCTAssert(app.staticTexts["Dashboard"].exists)
+    }
 }
