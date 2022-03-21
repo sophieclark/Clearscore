@@ -14,6 +14,9 @@ class ScoreView: NiblessView {
     
     let viewModel: ScoreViewModel
     
+    private var circleLayer: CAShapeLayer?
+    private var progressLayer: CAShapeLayer?
+    
     init(viewModel: ScoreViewModel) {
         self.viewModel = viewModel
         super.init()
@@ -25,6 +28,14 @@ class ScoreView: NiblessView {
         super.layoutSubviews()
         drawCircle()
         drawProgressArc()
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        circleLayer?.removeAllAnimations()
+        circleLayer?.removeFromSuperlayer()
+        progressLayer?.removeAllAnimations()
+        progressLayer?.removeFromSuperlayer()
     }
     
     private func setupUI() {
@@ -75,12 +86,12 @@ class ScoreView: NiblessView {
     private func drawCircle() {
         let radius = 125 > self.frame.midY - 16 ? self.frame.midY - 16 : 125
         let path = drawArc(from: -(CGFloat.pi / 2), to: CGFloat.pi + (CGFloat.pi / 2), radius: radius)
-        let circleLayer = CAShapeLayer()
-        circleLayer.path = path.cgPath
-        circleLayer.lineWidth = 2
-        circleLayer.strokeColor = UIColor.lineColor.cgColor
-        circleLayer.fillColor = UIColor.clear.cgColor
-        layer.addSublayer(circleLayer)
+        circleLayer = CAShapeLayer()
+        circleLayer!.path = path.cgPath
+        circleLayer!.lineWidth = 2
+        circleLayer!.strokeColor = UIColor.lineColor.cgColor
+        circleLayer!.fillColor = UIColor.clear.cgColor
+        layer.addSublayer(circleLayer!)
     }
     
     private func drawProgressArc() {
@@ -88,14 +99,14 @@ class ScoreView: NiblessView {
         let path = drawArc(from: -(CGFloat.pi / 2),
                            to: -(CGFloat.pi / 2) + ((CGFloat(viewModel.score) / CGFloat(viewModel.max)) * (CGFloat.pi  * 2)),
                            radius: radius)
-        let circleLayer = CAShapeLayer()
-        circleLayer.path = path.cgPath
-        circleLayer.lineWidth = 4
-        circleLayer.lineCap = .round
-        circleLayer.strokeColor = UIColor.lineColor.cgColor
-        circleLayer.fillColor = UIColor.clear.cgColor
-        addAnimation(to: circleLayer, add: 0.75, key: "drawProgressAnimation")
-        layer.addSublayer(circleLayer)
+        progressLayer = CAShapeLayer()
+        progressLayer!.path = path.cgPath
+        progressLayer!.lineWidth = 4
+        progressLayer!.lineCap = .round
+        progressLayer!.strokeColor = UIColor.lineColor.cgColor
+        progressLayer!.fillColor = UIColor.clear.cgColor
+        addAnimation(to: progressLayer!, add: 0.75, key: "drawProgressAnimation")
+        layer.addSublayer(progressLayer!)
     }
     
     private func addAnimation(to layer: CALayer, add duration: CFTimeInterval = 0, key: String) {

@@ -84,10 +84,10 @@ struct CreditReportViewModel {
         }
         
         self.monthsSinceLastMissedPayment = creditAccount.creditReportInfo.monthsSinceLastDelinquent
-        if creditAccount.creditReportInfo.hasEverBeenDelinquent {
+        if !creditAccount.creditReportInfo.hasEverBeenDelinquent {
             missedPayemntsText = String(localized: "creditreport.insights.nomissedpayments.text")
-        } else if monthsSinceLastMissedPayment <=  1 {
-            missedPayemntsText = String(format: "creditreport.insights.missedpayments.pluralmonths.text", monthsSinceLastMissedPayment)
+        } else if monthsSinceLastMissedPayment > 1 {
+            missedPayemntsText = String(format: "creditreport.insights.missedpayments.pluralmonths.text".localized(), monthsSinceLastMissedPayment)
         } else {
             missedPayemntsText = String(localized: "creditreport.insights.missedpayments.onemonth.text")
         }

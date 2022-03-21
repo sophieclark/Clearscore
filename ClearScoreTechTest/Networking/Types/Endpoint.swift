@@ -46,7 +46,9 @@ enum Endpoints {
 
     func getEndpoint() -> Endpoint {
         if CommandLine.arguments.contains("-launchWithSuccess") || CommandLine.arguments.contains("-launchWithFailure") {
-            return getTestData(success: CommandLine.arguments.contains("-launchWithSuccess"))
+            let isSuccess = CommandLine.arguments.contains("-launchWithSuccess")
+            let json = ProcessInfo.processInfo.environment["jsonToLoad"] ?? (isSuccess ? "mockcredit-values" : "mockcredit-values-fail")
+            return getTestData(success: isSuccess, jsonToLoad: json)
         } else {
             return getLiveEndpoint()
         }
@@ -59,13 +61,13 @@ enum Endpoints {
         }
     }
     
-    func getTestData(success: Bool) -> Endpoint {
+    func getTestData(success: Bool, jsonToLoad: String) -> Endpoint {
         switch self {
         case .creditValues:
             if success {
-                return Endpoint(api: Endpoint.API(url: URL(fileURLWithPath: Bundle.main.path(forResource: "mockcredit-values", ofType: "json")!)))
+                return Endpoint(api: Endpoint.API(url: URL(fileURLWithPath: Bundle.main.path(forResource: jsonToLoad, ofType: "json")!)))
             } else {
-                return Endpoint(api: Endpoint.API(url: URL(fileURLWithPath: Bundle.main.path(forResource: "mockcredit-values-fail", ofType: "json")!)))
+                return Endpoint(api: Endpoint.API(url: URL(fileURLWithPath: Bundle.main.path(forResource: jsonToLoad, ofType: "json")!)))
             }
             
         }

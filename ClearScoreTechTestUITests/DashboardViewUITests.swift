@@ -20,30 +20,25 @@ class DashboardViewUITests: XCTestCase {
     func testDashboardViewSuccess() throws {
         app.launchArguments = ["-launchWithSuccess"]
         app.launch()
-        XCTAssert(app.staticTexts["Dashboard"].exists)
-        
-        guard app.staticTexts["Your credit score is"].waitForExistence(timeout: 5) else {
-            XCTFail("Text doesn't exist \(#file) \(#line)")
-            return
-        }
-        
-        XCTAssert(app.staticTexts["Your credit score is"].exists)
-        XCTAssert(app.staticTexts["514"].exists)
-        XCTAssert(app.staticTexts["out of 700"].exists)
+        TestScreens().assertSuccessfullDashboardView(in: app)
     }
 
     func testDashboardViewFailure() throws {
         app.launchArguments = ["-launchWithFailure"]
         app.launch()
-        XCTAssert(app.staticTexts["Dashboard"].exists)
-
-        guard app.staticTexts["Oops!"].waitForExistence(timeout: 5) else {
-            XCTFail("Text doesn't exist \(#file) \(#line)")
-            return
-        }
-        
-        XCTAssert(app.staticTexts["Oops!"].exists)
-        XCTAssert(app.staticTexts["Something went wrong when loading your credit information."].exists)
-        XCTAssert(app.buttons["Retry"].exists)
+        TestScreens().assertDashboardErrorView(in: app)
     }
+    
+    func testDashboardViewSuccess_tappingScoreView_opensCreditReport() throws {
+        app.launchArguments = ["-launchWithSuccess"]
+        app.launch()
+        TestScreens().assertSuccessfullDashboardView(in: app)
+        
+        // tap score view
+        app.staticTexts["514"].tap()
+        
+        XCTAssertFalse(app.staticTexts["Dashboard"].exists)
+        XCTAssert(app.staticTexts["Credit report"].exists)
+    }
+
 }

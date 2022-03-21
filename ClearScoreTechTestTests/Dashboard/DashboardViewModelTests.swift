@@ -19,7 +19,7 @@ class DashboardViewModelTests: XCTestCase {
     }
     
     func test_refresh_updatesStateWithCreditAccount_onSuccess() {
-        let creditFetcher = CreditFetcher(endpoint: Endpoints.creditValues.getTestData(success: true))
+        let creditFetcher = CreditFetcher(endpoint: Endpoints.creditValues.getTestData(success: true, jsonToLoad: "mockcredit-values"))
         let sut = DashboardViewModel(creditFetcher: creditFetcher)
         
         let expectedScoreViewModel = ScoreViewModel(score: 514, max: 700)
@@ -57,7 +57,7 @@ class DashboardViewModelTests: XCTestCase {
     
     
     func test_refresh_updatesStateWithError_onFailure() {
-        let creditFetcher = CreditFetcher(endpoint: Endpoints.creditValues.getTestData(success: false))
+        let creditFetcher = CreditFetcher(endpoint: Endpoints.creditValues.getTestData(success: false, jsonToLoad: "mockcredit-values-fail"))
         let sut = DashboardViewModel(creditFetcher: creditFetcher)
         
         let expectedError = NetworkingError.parsing(description: "")
