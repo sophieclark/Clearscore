@@ -79,32 +79,33 @@ class ScoreView: NiblessView {
         bottomLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     }
     
-    private func drawArc(from startAngle: CGFloat, to  endAngle: CGFloat, radius: CGFloat) -> UIBezierPath {
+    private func getArc(from startAngle: CGFloat, to  endAngle: CGFloat, radius: CGFloat) -> UIBezierPath {
         return UIBezierPath(arcCenter: CGPoint(x: self.frame.midX, y: self.frame.midY), radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
+    }
+    
+    private func getShape(with path: CGPath, lineWidth: CGFloat, lineCap: CAShapeLayerLineCap = .butt, strokeColor: CGColor = UIColor.lineColor.cgColor) -> CAShapeLayer {
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = path
+        shapeLayer.lineWidth = lineWidth
+        shapeLayer.lineCap = lineCap
+        shapeLayer.strokeColor = strokeColor
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        return shapeLayer
     }
     
     private func drawCircle() {
         let radius = 125 > self.frame.midY - 16 ? self.frame.midY - 16 : 125
-        let path = drawArc(from: -(CGFloat.pi / 2), to: CGFloat.pi + (CGFloat.pi / 2), radius: radius)
-        circleLayer = CAShapeLayer()
-        circleLayer!.path = path.cgPath
-        circleLayer!.lineWidth = 2
-        circleLayer!.strokeColor = UIColor.lineColor.cgColor
-        circleLayer!.fillColor = UIColor.clear.cgColor
+        let path = getArc(from: -(CGFloat.pi / 2), to: CGFloat.pi + (CGFloat.pi / 2), radius: radius)
+        circleLayer = getShape(with: path.cgPath, lineWidth: 2)
         layer.addSublayer(circleLayer!)
     }
     
     private func drawProgressArc() {
         let radius = 120 > self.frame.midY - 20 ? self.frame.midY - 20 : 120
-        let path = drawArc(from: -(CGFloat.pi / 2),
+        let path = getArc(from: -(CGFloat.pi / 2),
                            to: -(CGFloat.pi / 2) + ((CGFloat(viewModel.score) / CGFloat(viewModel.max)) * (CGFloat.pi  * 2)),
                            radius: radius)
-        progressLayer = CAShapeLayer()
-        progressLayer!.path = path.cgPath
-        progressLayer!.lineWidth = 4
-        progressLayer!.lineCap = .round
-        progressLayer!.strokeColor = UIColor.lineColor.cgColor
-        progressLayer!.fillColor = UIColor.clear.cgColor
+        progressLayer = getShape(with: path.cgPath, lineWidth: 4, lineCap: .round)
         addAnimation(to: progressLayer!, add: 0.75, key: "drawProgressAnimation")
         layer.addSublayer(progressLayer!)
     }
